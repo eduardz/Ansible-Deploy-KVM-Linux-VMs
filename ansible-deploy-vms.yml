@@ -1,0 +1,8 @@
+---
+- name: Deploy VMs
+  hosts: kvm
+  become: true
+  vars_files:
+    - roles/ansible-deploy-vms/vars/main.yml
+  roles:
+    - ansible-deploy-vms

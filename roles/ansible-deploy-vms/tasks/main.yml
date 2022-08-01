@@ -1,0 +1,33 @@
+---
+    - name: Verify VMs names
+      command: "ls {{ vm_location }}"
+      register: disks
+      changed_when: "disks.rc != 0"
+
+    - name: Create disk
+      command: >
+               virt-builder --format qcow2 {{ item.value.os_template }}
+               -o {{ vm_location}}/{{ item.key }}.{{ item.value.file_type }}
+               --root-password password:{{ root_pass }} --size={{ item.value.disk_size }}
+      when: item.key not in disks.stdout
+      with_dict: "{{ guests }}"
+
+    - name: List the VMs
+      virt:
+        command: "list_vms"
+      register: vms
+
+    - name: VM installation
+      command: >
+                virt-install --import --name {{ item.key }}
+                --memory {{ item.value.mem }} --vcpus {{ item.value.cpus }}
+                --disk {{ vm_location }}/{{ item.key }}.{{ item.value.file_type }}
+                --noautoconsole --vnc --os-variant {{ item.value.os_type }}                
+      when: item.key not in vms.list_vms
+      with_dict: "{{ guests }}"
+
+    - name: Start VMs
+      virt:
+        name: "{{ item.key }}"
+        state: running
+      with_dict: "{{ guests }}"
