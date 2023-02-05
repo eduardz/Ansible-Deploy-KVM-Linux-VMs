@@ -1,14 +1,14 @@
 #####
-Deploy VirtualMachines in Linux KVM server with Ansible playbook
+Deploy VirtualMachines in Linux KVM server with Ansible playbook<br />
 
-Variables are stored in "roles/ansible-deploy-vms/vars/main.yml"
+Variables are stored in "roles/ansible-deploy-vms/vars/main.yml"<br />
 
-Get OSs names with "virt-builder --list"
+Get OSs names with "virt-builder --list"<br />
 
-example for OS template:
-os_template: fedora-34
-os_template: centos-8.2
-os_template: centos-7.8
+example for OS template:<br />
+os_template: fedora-34<br />
+os_template: centos-8.2<br />
+os_template: centos-7.8<br />
 
 
 
@@ -47,9 +47,9 @@ guests:
 
 
 
-#### deply VMs with password
-ansible-playbook -i inventory kvm.yml -K 
+#### deply VMs with password<br />
+ansible-playbook -i inventory kvm.yml -K <br />
 
-
-##### deply VMs with public key
-ansible-playbook -i inventory kvm.yml 
+<br />
+##### deply VMs with public key<br />
+ansible-playbook -i inventory kvm.yml <br />
