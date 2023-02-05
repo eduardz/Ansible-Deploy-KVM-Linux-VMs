@@ -10,9 +10,7 @@ os_template: fedora-34<br />
 os_template: centos-8.2<br />
 os_template: centos-7.8<br />
 
-
-
-"""
+```
 guests:
   kubernetes_master01:
     mem: 1024
@@ -43,13 +41,11 @@ guests:
     os_type: linux
     file_type: qcow2
     disk_size: 20G
-"""
-
-
+```
 
 #### deply VMs with password<br />
-ansible-playbook -i inventory kvm.yml -K <br />
+```ansible-playbook -i inventory kvm.yml -K``` <br />
 
 <br />
 ##### deply VMs with public key<br />
-ansible-playbook -i inventory kvm.yml <br />
+```ansible-playbook -i inventory kvm.yml``` <br />
