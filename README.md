@@ -17,7 +17,9 @@ fedora-37                x86_64     Fedora® 37 Server
 ubuntu-20.04             x86_64     Ubuntu 20.04 (focal)
 ```
 
-Example configuration:
+Example configuration with changeable:<br />
+os-version, disk, ram and cpu:
+
 ```
 guests:
   kubernetes_master01:
