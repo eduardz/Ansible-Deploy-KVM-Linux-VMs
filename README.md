@@ -16,6 +16,9 @@ debian-11                x86_64     Debian 11 (bullseye)
 fedora-37                x86_64     Fedora® 37 Server
 ubuntu-20.04             x86_64     Ubuntu 20.04 (focal)
 ```
+
+Example configuration:
+```
 guests:
   kubernetes_master01:
     mem: 1024
