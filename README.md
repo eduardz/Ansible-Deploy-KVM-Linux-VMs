@@ -3,8 +3,9 @@ Deploy VirtualMachines in Linux KVM server with Ansible playbook<br />
 
 Variables are stored in "roles/ansible-deploy-vms/vars/main.yml"<br />
 
-Get OSs names with "
-```virt-builder --list
+Get OSs names with:
+```
+virt-builder --list
 opensuse-tumbleweed      x86_64     openSUSE Tumbleweed
 alma-8.5                 x86_64     AlmaLinux 8.5
 centos-7.8               x86_64     CentOS 7.8
