@@ -44,9 +44,9 @@ guests:
 ```
 
 #### deply VMs with password<br />
-```ansible-playbook -i inventory kvm.yml -K``` <br />
+```ansible-playbook -i inventory kvm.yml -K``` 
 
-<br />
+
 #### deply VMs with public key<br />
 ```ansible-playbook -i inventory kvm.yml``` 
 
