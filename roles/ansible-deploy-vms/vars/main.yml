@@ -8,15 +8,15 @@ guests:
   kubernetes_master01:
     mem: 1024
     cpus: 1
-    os_template: centos-8.2
+    os_template: debian-11
     os_type: linux
     file_type: qcow2
-    disk_size: 10G
+    disk_size: 20G
 
   kubernetes_slave01:
     mem: 1024
     cpus: 1
-    os_template: centos-7.8
+    os_template: debian-11
     os_type: linux
     file_type: qcow2
     disk_size: 20G
@@ -24,7 +24,7 @@ guests:
   kubernetes_slave02:
     mem: 1024
     cpus: 1
-    os_template: centos-7.8
+    os_template: debian-11
     os_type: linux
     file_type: qcow2
     disk_size: 20G
@@ -32,7 +32,7 @@ guests:
   kubernetes_slave03:
     mem: 1024
     cpus: 1
-    os_template: centos-7.8
+    os_template: fedora-37
     os_type: linux
     file_type: qcow2
     disk_size: 20G
